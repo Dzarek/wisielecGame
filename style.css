@@ -142,3 +142,62 @@ video {
 #start button:hover+.rocket {
     top: -100vh;
 }
+
+@media(orientation:landscape) and (max-width: 1023px) {
+    #hangman {
+        width: 80vw;
+        margin: 2px auto;
+        overflow: hidden;
+    }
+
+    #word {
+        letter-spacing: 0px;
+        font-size: 40px;
+        padding: 5px 2px 0px;
+        border: 1px rgb(220, 220, 220) solid;
+        width: 70vw;
+        margin: 0 auto;
+
+    }
+
+    #letters {
+        /* padding: 20px 50px; */
+        width: 80vw;
+        margin: 0 auto;
+        position: absolute;
+
+    }
+
+    #letters button {
+        width: 40px;
+        height: 40px;
+        /* padding: 15px; */
+        margin: 4px;
+        font-size: 20px;
+        border: 1px rgb(220, 220, 220) solid;
+    }
+
+    #output {
+
+        margin-bottom: 10px;
+    }
+
+    #category {
+        padding: 15px 0px;
+        font-size: 26px;
+        letter-spacing: 5px;
+    }
+
+    #start {
+        bottom: 5vh;
+    }
+
+    #start button {
+        padding: 3px 10px;
+        font-size: 40px;
+    }
+
+    #start img {
+        height: 60px;
+    }
+}
