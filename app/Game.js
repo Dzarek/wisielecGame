@@ -26,6 +26,18 @@ class Game {
       category: "SERIALE",
     },
     {
+      text: "ranczo",
+      category: "SERIALE",
+    },
+    {
+      text: "vikings",
+      category: "SERIALE",
+    },
+    {
+      text: "La casa de papel",
+      category: "SERIALE",
+    },
+    {
       text: "eurobusiness",
       category: "GRA PLANSZOWA",
     },
@@ -45,6 +57,70 @@ class Game {
       text: "podaj dalej",
       category: "GRA PLANSZOWA",
     },
+    {
+      text: "dominion",
+      category: "GRA PLANSZOWA",
+    },
+    {
+      text: "tiger",
+      category: "ANIMALS",
+    },
+    {
+      text: "lion",
+      category: "ANIMALS",
+    },
+    {
+      text: "monkey",
+      category: "ANIMALS",
+    },
+    {
+      text: "chicken",
+      category: "ANIMALS",
+    },
+    {
+      text: "rabbit",
+      category: "ANIMALS",
+    },
+    {
+      text: "turtle",
+      category: "ANIMALS",
+    },
+    {
+      text: "mouse",
+      category: "ANIMALS",
+    },
+    {
+      text: "elephant",
+      category: "ANIMALS",
+    },
+    {
+      text: "polska",
+      category: "PAŃSTWA",
+    },
+    {
+      text: "hiszpania",
+      category: "PAŃSTWA",
+    },
+    {
+      text: "włochy",
+      category: "PAŃSTWA",
+    },
+    {
+      text: "rosja",
+      category: "PAŃSTWA",
+    },
+    {
+      text: "chiny",
+      category: "PAŃSTWA",
+    },
+    {
+      text: "niemcy",
+      category: "PAŃSTWA",
+    },
+    {
+      text: "stany zjednoczone",
+      category: "PAŃSTWA",
+    },
   ];
 
   constructor({ lettersWrapper, categoryWrapper, wordWrapper, outputWrapper }) {
@@ -58,6 +134,7 @@ class Game {
     ];
     this.categoryWrapper.innerHTML = category;
     this.quote = new Quote(text);
+    this.text = text;
   }
 
   guess(letter, event) {
@@ -77,7 +154,7 @@ class Game {
   drawLetters() {
     for (let i = 0; i < 26; i++) {
       const label = (i + 10).toString(36);
-      const babel = (10).toString(36);
+      // const babel = (10).toString(36);
       const button = document.createElement("button");
       button.innerHTML = label;
       button.style.color = "white";
@@ -108,11 +185,13 @@ class Game {
   winning() {
     this.wordWrapper.innerHTML = "GRATULACJE, WYGRAŁEŚ! KONIEC GRY";
     this.lettersWrapper.innerHTML = "";
+    this.categoryWrapper.innerHTML = "";
     btn.style.display = "block";
   }
   loosing() {
     this.wordWrapper.innerHTML = "NIESTETY, PRZEGRAŁEŚ! KONIEC GRY";
     this.lettersWrapper.innerHTML = "";
+    this.categoryWrapper.innerHTML = `Hasło:  ${this.text}`;
     btn.style.display = "block";
   }
 }
