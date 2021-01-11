@@ -7,19 +7,14 @@
 html {
     font-size: 30px;
     font-family: sans-serif;
-
     color: whitesmoke;
     text-transform: uppercase;
-
 }
 
 body {
-    overflow: hidden;
     width: 100vw;
-    /* background-image: url(board-2084766_1280.jpg);
-    background-size: cover;
-    background-repeat: no-repeat; 
-    background-position: center center; */
+    height: 100vh;
+    overflow: hidden;
 }
 
 #hangman {
@@ -34,42 +29,32 @@ body {
     border: 2px rgb(220, 220, 220) solid;
     text-align: center;
     font-family: 'Nerko One', cursive;
-
-
 }
 
 #letters {
-    /* padding: 20px 50px; */
     width: 50vw;
     text-align: center;
-
-
 }
 
 #letters button {
     font-family: 'Nerko One', cursive;
     width: 70px;
     height: 70px;
-    /* padding: 15px; */
     margin: 10px;
     text-transform: uppercase;
     font-size: 40px;
     cursor: pointer;
     line-height: 100%;
     background-color: rgba(255, 255, 255, 0.1);
-
     transition-duration: .2s;
     border: 2px rgb(220, 220, 220) solid;
 }
 
 #letters button:hover {
     transform: scale(1.2);
-
 }
 
-
 #output {
-
     display: flex;
     width: 100%;
     margin-bottom: 30px;
@@ -77,7 +62,6 @@ body {
 
 #output .step {
     width: calc(100% / 8);
-    /* border-right: 3px #fff solid; */
 }
 
 #output .step {
@@ -97,12 +81,13 @@ body {
     letter-spacing: 10px;
 }
 
-
 video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
     z-index: -5;
     opacity: 0.95;
 }
@@ -113,9 +98,6 @@ video {
     bottom: 20vh;
     left: 50%;
     transform: translateX(-50%);
-
-
-
 }
 
 #start button {
@@ -127,8 +109,6 @@ video {
     border: 2px rgb(220, 220, 220) solid;
     background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer;
-
-
 }
 
 #start img {
@@ -136,7 +116,6 @@ video {
     top: 0;
     height: 120px;
     transition-duration: 2s;
-
 }
 
 #start button:hover+.rocket {
@@ -157,21 +136,17 @@ video {
         border: 1px rgb(220, 220, 220) solid;
         width: 70vw;
         margin: 0 auto;
-
     }
 
     #letters {
-        /* padding: 20px 50px; */
         width: 80vw;
         margin: 0 auto;
         position: absolute;
-
     }
 
     #letters button {
         width: 40px;
         height: 40px;
-        /* padding: 15px; */
         margin: 4px;
         font-size: 20px;
         border: 1px rgb(220, 220, 220) solid;
@@ -218,13 +193,6 @@ video {
         overflow: hidden;
     }
 
-    video {
-        height: 100vh;
-        width: auto;
-        z-index: -5;
-        opacity: 0.95;
-    }
-
     #word {
         letter-spacing: 0px;
         font-size: 40px;
@@ -236,17 +204,14 @@ video {
     }
 
     #letters {
-        /* padding: 20px 50px; */
         width: 80vw;
         margin: 0 auto;
         position: absolute;
-
     }
 
     #letters button {
         width: 40px;
         height: 40px;
-        /* padding: 15px; */
         margin: 4px;
         font-size: 30px;
         border: 1px rgb(220, 220, 220) solid;
